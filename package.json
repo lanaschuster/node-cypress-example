@@ -1,0 +1,14 @@
+{
+  "name": "node-cypress-example",
+  "version": "1.0.0",
+  "description": "Exemplo de utilização do Cypress com Node.js",
+  "main": "index.js",
+  "author": "Lana Schuster",
+  "license": "MIT",
+  "dependencies": {
+    "cypress": "3.6.0"
+  },
+  "scripts": {
+    "cypress:open": "cypress open"
+  }
+}
