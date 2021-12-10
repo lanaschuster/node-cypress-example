@@ -65,4 +65,24 @@ describe('Helpers', () => {
       .its('endereco.rua')
       .should('be.equal', 'Rua xpto')
   })
+
+  it('Invoke - exemplo 1', () => {
+    const getValue = () => 1
+
+    cy.wrap({ fn: getValue })
+      .invoke('fn')
+      .should('be.equal', 1)
+  })
+
+  it('Invoke - exemplo 2', () => {
+    const soma = (a, b) => a + b
+
+    cy.wrap({ fn: soma })
+      .invoke('fn', 2, 5)
+      .should('be.equal', 7)
+  })
+
+  it('Invoke - exemplo 3', () => {
+    cy.window().invoke('alert', 'alo mundo!')
+  })
 })
